@@ -13,7 +13,8 @@
 <meta name="twitter:title" content="West AI Labs — AI Infrastructure That Ships">
 <meta name="twitter:description" content="Private, production-ready AI systems behind the firewall.">
 <!-- favicon: replace with actual favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#1e2024;--bg2:#262930;--bg3:#2e3138;--cyan:#22d3ee;--violet:#a78bfa;--text:#e2e8f0;--muted:#94a3b8;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
@@ -104,7 +105,7 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
 
 <nav>
 <div class="nav-inner">
-  <div class="nav-logo">West <span>AI</span> Labs</div>
+  <div class="nav-logo"><img src="assets/logo-dark.png" alt="West AI Labs" style="height:32px;vertical-align:middle;margin-right:.5rem">West <span>AI</span> Labs</div>
   <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
   <ul class="nav-links">
     <li><a href="#services" onclick="this.closest('.nav-links').classList.remove('open')">Services</a></li>
@@ -118,6 +119,7 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
 <section class="hero" id="hero">
 <div class="container">
   <div class="hero-content fade-in">
+    <img src="assets/logo-dark.png" alt="West AI Labs" style="width:140px;margin-bottom:1.5rem">
     <h1>AI Infrastructure<br>That <span class="accent">Ships</span></h1>
     <p class="subtitle">West AI Labs builds private, production-ready AI systems behind the firewall. Real engineering. Real infrastructure. No slideware.</p>
     <div class="hero-cta">
@@ -166,33 +168,36 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
     <h2 class="section-title">The Nebulus Stack</h2>
     <p style="color:var(--muted);max-width:600px">Production-grade open source tools for local-first AI. This is what we build with — and what we ship.</p>
   </div>
+  <div style="margin:2.5rem auto 0;max-width:480px;text-align:center" class="fade-in">
+    <img src="assets/nebulus-stack.png" alt="Nebulus Stack Architecture" style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.06)">
+  </div>
   <div class="repo-grid">
-    <a class="repo-card fade-in" href="https://github.com/jlwestsr/nebulus-gantry" target="_blank" rel="noopener">
+    <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-gantry" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-gantry</div>
       <div class="repo-desc">Self-hosted AI chat interface with RAG, memory, and admin. React 19, TypeScript, FastAPI.</div>
       <span class="repo-link">View on GitHub →</span>
     </a>
-    <a class="repo-card fade-in" href="https://github.com/jlwestsr/nebulus-prime" target="_blank" rel="noopener">
+    <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-prime" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-prime</div>
       <div class="repo-desc">Containerized local AI ecosystem. Full-stack deployment for private infrastructure. Python.</div>
       <span class="repo-link">View on GitHub →</span>
     </a>
-    <a class="repo-card fade-in" href="https://github.com/jlwestsr/nebulus-edge" target="_blank" rel="noopener">
+    <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-edge" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-edge</div>
       <div class="repo-desc">Full stack AI LLM host optimized for Mac Mini M4 Pro. Edge inference, local-first.</div>
       <span class="repo-link">View on GitHub →</span>
     </a>
-    <a class="repo-card fade-in" href="https://github.com/jlwestsr/nebulus-core" target="_blank" rel="noopener">
+    <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-core" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-core</div>
       <div class="repo-desc">Shared core library powering Nebulus Prime and Edge. Common utilities and abstractions.</div>
       <span class="repo-link">View on GitHub →</span>
     </a>
-    <a class="repo-card fade-in" href="https://github.com/jlwestsr/nebulus-atom" target="_blank" rel="noopener">
+    <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-atom" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-atom</div>
       <div class="repo-desc">Autonomous AI agent CLI. Task execution, tool use, and multi-step reasoning from the terminal.</div>
       <span class="repo-link">View on GitHub →</span>
     </a>
-    <a class="repo-card fade-in" href="https://github.com/jlwestsr/nebulus-forge" target="_blank" rel="noopener">
+    <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-forge" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-forge</div>
       <div class="repo-desc">Production-grade project generator for AI engineering. Scaffolding that ships clean.</div>
       <span class="repo-link">View on GitHub →</span>
@@ -208,7 +213,7 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
     <h2 class="section-title">Built by an engineer, not a pitch deck</h2>
   </div>
   <div class="about-content fade-in">
-    <p><strong>Jason West</strong> has spent 25+ years building software and systems — from Navy operations to enterprise infrastructure to the current wave of AI.</p>
+    <p><strong>Jason West</strong> has spent 30+ years building software and systems — from Navy operations to enterprise infrastructure to the current wave of AI.</p>
     <p>West AI Labs exists because most organizations don't need another SaaS subscription. They need someone who can deploy AI models on their hardware, connect them to their data, and make the whole thing actually work in production.</p>
     <p>That's the job. No hype, no vaporware. Just infrastructure that ships and systems that run.</p>
   </div>
@@ -240,7 +245,7 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
 </section>
 
 <footer>
-<div class="container">© 2025 West AI Labs LLC. All rights reserved.</div>
+<div class="container">© 2026 West AI Labs LLC. All rights reserved.</div>
 </footer>
 
 <script>
