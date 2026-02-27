@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: "West AI Labs — AI Infrastructure That Ships" }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta property="og:title" content="{{ page.og_title | default: "West AI Labs — AI Infrastructure That Ships" }}">
+<meta property="og:description" content="{{ page.og_description | default: "Private, production-ready AI systems behind the firewall. From consulting to deployment." }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://westailabs.com">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.twitter_title | default: "West AI Labs — AI Infrastructure That Ships" }}">
+<meta name="twitter:description" content="{{ page.twitter_description | default: "Private, production-ready AI systems behind the firewall." }}">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FY6CCE6E37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FY6CCE6E37');
+</script>
+<!-- favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#1e2024;--bg2:#262930;--bg3:#2e3138;--cyan:#22d3ee;--violet:#a78bfa;--text:#e2e8f0;--muted:#94a3b8;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--cyan);text-decoration:none;transition:color .2s}
+a:hover{color:var(--violet)}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,32,36,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:-.02em}
+.nav-logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:var(--muted);font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-links a.active{color:var(--cyan)}
+.hamburger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
+
+/* Sections */
+section{padding:6rem 1.5rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:.75rem}
+.section-title{font-size:2rem;font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+.hero-content{max-width:680px}
+.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:1.25rem}
+.hero h1 .accent{background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .subtitle{font-size:1.2rem;color:var(--muted);max-width:520px;line-height:1.6;margin-bottom:2rem}
+.hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap}
+.hero-cta a{padding:.7rem 1.6rem;border-radius:6px;font-size:.9rem;font-weight:600;transition:all .25s}
+.btn-primary{background:var(--cyan);color:var(--bg)!important}
+.btn-primary:hover{background:var(--violet);transform:translateY(-1px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.15);color:var(--text)!important}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)!important}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2.5rem}
+.service-card{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:1.75rem;transition:border-color .3s,transform .3s}
+.service-card:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.service-icon{font-size:1.6rem;margin-bottom:.75rem}
+.service-card h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+.service-card p{font-size:.875rem;color:var(--muted);line-height:1.6}
+
+/* Open Source */
+#opensource{background:var(--bg2)}
+.repo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-top:2.5rem}
+.repo-card{background:var(--bg);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.repo-card:hover{border-color:var(--violet);transform:translateY(-2px)}
+.repo-name{font-size:1rem;font-weight:600;color:var(--cyan);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+.repo-name svg{width:16px;height:16px;flex-shrink:0}
+.repo-desc{font-size:.85rem;color:var(--muted);line-height:1.55;flex:1}
+.repo-link{margin-top:.75rem;font-size:.8rem;font-weight:500;color:var(--violet)}
+.repo-link:hover{color:var(--cyan)}
+
+/* About */
+.about-content{max-width:680px;margin-top:2rem}
+.about-content p{color:var(--muted);margin-bottom:1rem;font-size:1rem;line-height:1.7}
+.about-content strong{color:var(--text);font-weight:600}
+
+/* Community */
+#community{background:var(--bg3)}
+.community-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2.5rem}
+.community-copy p{color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:1rem}
+.community-copy strong{color:var(--text)}
+.community-cta-box{background:var(--bg2);border:1px solid rgba(34,211,238,.2);border-radius:12px;padding:2rem;text-align:center}
+.community-cta-box .discord-icon{font-size:3rem;margin-bottom:1rem}
+.community-cta-box h3{font-size:1.2rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+.community-cta-box p{font-size:.875rem;color:var(--muted);margin-bottom:1.5rem}
+.community-cta-box a.btn-primary{display:inline-block;padding:.75rem 1.75rem;border-radius:6px;font-size:.9rem;font-weight:700;background:var(--cyan);color:var(--bg)!important;transition:all .25s}
+.community-cta-box a.btn-primary:hover{background:var(--violet);transform:translateY(-1px)}
+.community-stats{display:flex;gap:2rem;margin-top:1.5rem;justify-content:center}
+.stat{text-align:center}
+.stat .num{font-size:1.5rem;font-weight:800;color:var(--cyan)}
+.stat .label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* Contact */
+#contact{background:var(--bg2)}
+.contact-links{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap}
+.contact-link{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.95rem;transition:color .2s}
+.contact-link:hover{color:var(--cyan)}
+.contact-link svg{width:20px;height:20px;flex-shrink:0}
+
+/* Footer */
+footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,184,.5);border-top:1px solid rgba(255,255,255,.04)}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:.75rem}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+.footer-links a{color:rgba(148,163,184,.5);font-size:.8rem;transition:color .2s}
+.footer-links a:hover{color:var(--cyan)}
+
+/* Animations */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* Mobile */
+@media(max-width:768px){
+  .community-inner{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(30,32,36,.97);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  section{padding:4rem 1.25rem}
+  .repo-grid{grid-template-columns:1fr}
+  .contact-links{flex-direction:column;gap:1.25rem}
+  .community-stats{gap:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+  <div class="nav-logo"><img src="/assets/logo-dark.png" alt="West AI Labs" style="height:32px;vertical-align:middle;margin-right:.5rem">West <span>AI</span> Labs</div>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="#services" onclick="this.closest('.nav-links').classList.remove('open')">Services</a></li>
+    <li><a href="#opensource" onclick="this.closest('.nav-links').classList.remove('open')">Open Source</a></li>
+    <li><a href="#about" onclick="this.closest('.nav-links').classList.remove('open')">About</a></li>
+    <!-- TODO: migrate blog/research to westailabs.com subdirectory eventually -->
+    <li><a href="https://moto-westai.github.io/research/" target="_blank" rel="noopener">Research</a></li>
+    <li><a href="https://moto-westai.github.io/blog/" target="_blank" rel="noopener">Blog</a></li>
+    <li><a href="https://discord.gg/vtJykN3t" target="_blank" rel="noopener" style="color:var(--cyan)">Community</a></li>
+    <li><a href="#contact" onclick="this.closest('.nav-links').classList.remove('open')">Contact</a></li>
+  </ul>
+</div>
+</nav>
+
+{{ content }}
+
+<footer>
+<div class="container">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#opensource">Open Source</a>
+      <a href="#about">About</a>
+      <a href="https://moto-westai.github.io/research/" target="_blank" rel="noopener">Research</a>
+      <a href="https://moto-westai.github.io/blog/" target="_blank" rel="noopener">Blog</a>
+      <a href="https://discord.gg/vtJykN3t" target="_blank" rel="noopener">Community</a>
+      <a href="mailto:jason@westailabs.com">Contact</a>
+      <a href="https://github.com/westailabs" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div>© 2026 West AI Labs LLC. All rights reserved.</div>
+  </div>
+</div>
+</footer>
+
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('visible'),o.unobserve(e.target))})},{threshold:.15});
+document.querySelectorAll('.fade-in').forEach(e=>o.observe(e));
+</script>
+</body>
+</html>

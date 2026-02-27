@@ -1,128 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>West AI Labs — AI Infrastructure That Ships</title>
-<meta name="description" content="West AI Labs builds private, production-ready AI systems behind the firewall. Consulting, deployment, and open-source tooling for enterprises that need AI infrastructure that actually works.">
-<meta property="og:title" content="West AI Labs — AI Infrastructure That Ships">
-<meta property="og:description" content="Private, production-ready AI systems behind the firewall. From consulting to deployment.">
-<meta property="og:type" content="website">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FY6CCE6E37"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FY6CCE6E37');
-</script>
-<meta property="og:url" content="https://westailabs.com">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="West AI Labs — AI Infrastructure That Ships">
-<meta name="twitter:description" content="Private, production-ready AI systems behind the firewall.">
-<!-- favicon: replace with actual favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#1e2024;--bg2:#262930;--bg3:#2e3138;--cyan:#22d3ee;--violet:#a78bfa;--text:#e2e8f0;--muted:#94a3b8;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--cyan);text-decoration:none;transition:color .2s}
-a:hover{color:var(--violet)}
-
-/* Nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,32,36,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-inner{max-width:1100px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:-.02em}
-.nav-logo span{color:var(--cyan)}
-.nav-links{display:flex;gap:1.8rem;list-style:none}
-.nav-links a{color:var(--muted);font-size:.875rem;font-weight:500;transition:color .2s}
-.nav-links a:hover{color:var(--cyan)}
-.hamburger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
-
-/* Sections */
-section{padding:6rem 1.5rem}
-.container{max-width:1100px;margin:0 auto}
-.section-label{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:.75rem}
-.section-title{font-size:2rem;font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
-
-/* Hero */
-.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
-.hero-content{max-width:680px}
-.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:1.25rem}
-.hero h1 .accent{background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero .subtitle{font-size:1.2rem;color:var(--muted);max-width:520px;line-height:1.6;margin-bottom:2rem}
-.hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap}
-.hero-cta a{padding:.7rem 1.6rem;border-radius:6px;font-size:.9rem;font-weight:600;transition:all .25s}
-.btn-primary{background:var(--cyan);color:var(--bg)!important}
-.btn-primary:hover{background:var(--violet);transform:translateY(-1px)}
-.btn-ghost{border:1px solid rgba(255,255,255,.15);color:var(--text)!important}
-.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)!important}
-
-/* Services */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2.5rem}
-.service-card{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:1.75rem;transition:border-color .3s,transform .3s}
-.service-card:hover{border-color:var(--cyan);transform:translateY(-3px)}
-.service-icon{font-size:1.6rem;margin-bottom:.75rem}
-.service-card h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
-.service-card p{font-size:.875rem;color:var(--muted);line-height:1.6}
-
-/* Open Source */
-#opensource{background:var(--bg2)}
-.repo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-top:2.5rem}
-.repo-card{background:var(--bg);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
-.repo-card:hover{border-color:var(--violet);transform:translateY(-2px)}
-.repo-name{font-size:1rem;font-weight:600;color:var(--cyan);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
-.repo-name svg{width:16px;height:16px;flex-shrink:0}
-.repo-desc{font-size:.85rem;color:var(--muted);line-height:1.55;flex:1}
-.repo-link{margin-top:.75rem;font-size:.8rem;font-weight:500;color:var(--violet)}
-.repo-link:hover{color:var(--cyan)}
-
-/* About */
-.about-content{max-width:680px;margin-top:2rem}
-.about-content p{color:var(--muted);margin-bottom:1rem;font-size:1rem;line-height:1.7}
-.about-content strong{color:var(--text);font-weight:600}
-
-/* Contact */
-#contact{background:var(--bg2)}
-.contact-links{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap}
-.contact-link{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.95rem;transition:color .2s}
-.contact-link:hover{color:var(--cyan)}
-.contact-link svg{width:20px;height:20px;flex-shrink:0}
-
-/* Footer */
-footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,184,.5);border-top:1px solid rgba(255,255,255,.04)}
-
-/* Animations */
-.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* Mobile */
-@media(max-width:640px){
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(30,32,36,.97);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid rgba(255,255,255,.06)}
-  .nav-links.open{display:flex}
-  .hamburger{display:block}
-  section{padding:4rem 1.25rem}
-  .repo-grid{grid-template-columns:1fr}
-  .contact-links{flex-direction:column;gap:1.25rem}
-}
-</style>
-</head>
-<body>
-
-<nav>
-<div class="nav-inner">
-  <div class="nav-logo"><img src="assets/logo-dark.png" alt="West AI Labs" style="height:32px;vertical-align:middle;margin-right:.5rem">West <span>AI</span> Labs</div>
-  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
-  <ul class="nav-links">
-    <li><a href="#services" onclick="this.closest('.nav-links').classList.remove('open')">Services</a></li>
-    <li><a href="#opensource" onclick="this.closest('.nav-links').classList.remove('open')">Open Source</a></li>
-    <li><a href="#about" onclick="this.closest('.nav-links').classList.remove('open')">About</a></li>
-    <li><a href="#contact" onclick="this.closest('.nav-links').classList.remove('open')">Contact</a></li>
-  </ul>
-</div>
-</nav>
+---
+layout: default
+title: "West AI Labs — AI Infrastructure That Ships"
+description: "West AI Labs builds private, production-ready AI systems behind the firewall. Consulting, deployment, and open-source tooling for enterprises that need AI infrastructure that actually works."
+og_title: "West AI Labs — AI Infrastructure That Ships"
+og_description: "Private, production-ready AI systems behind the firewall. From consulting to deployment."
+twitter_title: "West AI Labs — AI Infrastructure That Ships"
+twitter_description: "Private, production-ready AI systems behind the firewall."
+---
 
 <section class="hero" id="hero">
 <div class="container">
@@ -175,8 +59,6 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
     <h2 class="section-title">The Nebulus Stack</h2>
     <p style="color:var(--muted);max-width:600px">Production-grade open source tools for local-first AI. This is what we build with — and what we ship.</p>
   </div>
-  <div style="margin:2.5rem auto 0;max-width:480px;text-align:center" class="fade-in">
-  </div>
   <div class="repo-grid">
     <a class="repo-card fade-in" href="https://github.com/westailabs/nebulus-gantry" target="_blank" rel="noopener">
       <div class="repo-name"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg> nebulus-gantry</div>
@@ -208,6 +90,42 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
       <div class="repo-desc">Production-grade project generator for AI engineering. Scaffolding that ships clean.</div>
       <span class="repo-link">View on GitHub →</span>
     </a>
+  </div>
+</div>
+</section>
+
+<section id="community">
+<div class="container">
+  <div class="fade-in">
+    <div class="section-label">Community</div>
+    <h2 class="section-title">Build with people who ship</h2>
+  </div>
+  <div class="community-inner">
+    <div class="community-copy fade-in">
+      <p>The West AI Labs Discord is where <strong>AI engineers, tinkerers, and infrastructure builders</strong> gather to figure this stuff out together.</p>
+      <p>We talk local model deployment, agentic systems, RAG pipelines, hardware, and the hard parts that never make it into the blog posts. This isn't a hype space — it's a <strong>working community</strong> for people doing real work with AI.</p>
+      <p>Multi-agent orchestration, private inference, open-source tooling — if you're building it, there's a home for that conversation here.</p>
+    </div>
+    <div class="community-cta-box fade-in">
+      <div class="discord-icon">🎙️</div>
+      <h3>West AI Labs Community</h3>
+      <p>A growing community of AI engineers building private, production-ready systems.</p>
+      <a href="https://discord.gg/vtJykN3t" target="_blank" rel="noopener" class="btn-primary">Join on Discord</a>
+      <div class="community-stats">
+        <div class="stat">
+          <div class="num">🤖</div>
+          <div class="label">Multi-Agent</div>
+        </div>
+        <div class="stat">
+          <div class="num">🔒</div>
+          <div class="label">Private AI</div>
+        </div>
+        <div class="stat">
+          <div class="num">⚙️</div>
+          <div class="label">Open Source</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
@@ -247,17 +165,10 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
       GitHub
     </a>
+    <a class="contact-link" href="https://discord.gg/vtJykN3t" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+      Discord Community
+    </a>
   </div>
 </div>
 </section>
-
-<footer>
-<div class="container">© 2026 West AI Labs LLC. All rights reserved.</div>
-</footer>
-
-<script>
-const o=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('visible'),o.unobserve(e.target))})},{threshold:.15});
-document.querySelectorAll('.fade-in').forEach(e=>o.observe(e));
-</script>
-</body>
-</html>

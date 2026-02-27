@@ -1,0 +1,22 @@
+# West AI Labs — Jekyll Configuration
+title: "West AI Labs"
+description: "West AI Labs builds private, production-ready AI systems behind the firewall. Consulting, deployment, and open-source tooling for enterprises that need AI infrastructure that actually works."
+url: "https://westailabs.com"
+baseurl: ""
+
+# Google Analytics
+google_analytics: "G-FY6CCE6E37"
+
+# Plugins (GitHub Pages whitelist only)
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - ARCHITECT-REVIEW-2026-02-27.md
+  - READY-TO-REVIEW.md
+  - CHANGELOG.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - "*.sh"
