@@ -1,98 +1,37 @@
 ---
-layout: default
+layout: page
 title: Research Library
 permalink: /research/
 ---
-<style>
-  .research-hero {
-    padding: 3rem 0 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    margin-bottom: 2.5rem;
-  }
-  .research-hero h1 {
-    font-size: 2rem;
-    background: linear-gradient(135deg, var(--cyan), var(--violet));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-  }
-  .research-hero p {
-    color: var(--text-muted);
-    font-size: 1rem;
-    max-width: 560px;
-  }
-  .research-section h2 {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--cyan);
-    margin: 2rem 0 1rem;
-  }
-  .research-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    display: block;
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .research-card:hover {
-    border-color: var(--cyan);
-    background: rgba(34,211,238,0.05);
-    text-decoration: none;
-  }
-  .research-card h3 {
-    color: var(--text);
-    font-size: 1.05rem;
-    margin: 0 0 0.5rem;
-    line-height: 1.4;
-  }
-  .research-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin: 0;
-    line-height: 1.6;
-  }
-  .research-footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-  }
-</style>
 
-<div class="research-hero">
-  <h1>Research Library</h1>
-  <p>Independent research on AI agents, security, and infrastructure — published by West AI Labs.</p>
-</div>
+<h1 style="font-size:2rem;background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.5rem;">Research Library</h1>
+<p style="color:var(--muted);font-size:1rem;max-width:560px;margin-bottom:2.5rem;">Independent research on AI agents, security, and infrastructure — published by West AI Labs.</p>
 
-<div class="research-section">
-  <h2>Security &amp; Threat Landscape</h2>
+<h2 style="font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cyan);margin:2rem 0 1rem;">Security &amp; Threat Landscape</h2>
 
-  <a href="/research/agentic-economy-injection-arms-race/" class="research-card">
-    <h3>The Agentic Economy and the Prompt Injection Arms Race</h3>
-    <p>Visa, Mastercard, Stripe, and Google built payment-capable agent infrastructure in 6 months. The injection problem is completely unsolved. Here's why that matters.</p>
-  </a>
+<a href="/research/agentic-economy-injection-arms-race/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.5rem;margin-bottom:1rem;text-decoration:none;display:block;transition:border-color 0.15s,background 0.15s;"
+   onmouseover="this.style.borderColor='var(--cyan)';this.style.background='rgba(34,211,238,0.05)'"
+   onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.background='rgba(255,255,255,0.04)'">
+  <h3 style="color:var(--text);font-size:1.05rem;margin:0 0 0.5rem;line-height:1.4;">The Agentic Economy and the Prompt Injection Arms Race</h3>
+  <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.6;">Visa, Mastercard, Stripe, and Google built payment-capable agent infrastructure in 6 months. The injection problem is completely unsolved. Here's why that matters.</p>
+</a>
 
-  <a href="/research/promptware-kill-chain/" class="research-card">
-    <h3>The Promptware Kill Chain</h3>
-    <p>Prompt injection is the wrong frame. Attacks on LLM-based systems have evolved into a distinct class of malware — and 90%+ of published defenses have already been bypassed.</p>
-  </a>
-</div>
+<a href="/research/promptware-kill-chain/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.5rem;margin-bottom:1rem;text-decoration:none;display:block;transition:border-color 0.15s,background 0.15s;"
+   onmouseover="this.style.borderColor='var(--cyan)';this.style.background='rgba(34,211,238,0.05)'"
+   onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.background='rgba(255,255,255,0.04)'">
+  <h3 style="color:var(--text);font-size:1.05rem;margin:0 0 0.5rem;line-height:1.4;">The Promptware Kill Chain</h3>
+  <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.6;">Prompt injection is the wrong frame. Attacks on LLM-based systems have evolved into a distinct class of malware — and 90%+ of published defenses have already been bypassed.</p>
+</a>
 
-<div class="research-section">
-  <h2>AI Social Platforms &amp; Agent Behavior</h2>
+<h2 style="font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cyan);margin:2rem 0 1rem;">AI Social Platforms &amp; Agent Behavior</h2>
 
-  <a href="/research/moltbook-ai-social-platforms/" class="research-card">
-    <h3>Moltbook and the Rise of AI Social Platforms</h3>
-    <p>The first AI-only social network at scale — and what a massive data breach reveals about building agent infrastructure responsibly.</p>
-  </a>
-</div>
+<a href="/research/moltbook-ai-social-platforms/" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.5rem;margin-bottom:1rem;text-decoration:none;display:block;transition:border-color 0.15s,background 0.15s;"
+   onmouseover="this.style.borderColor='var(--cyan)';this.style.background='rgba(34,211,238,0.05)'"
+   onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.background='rgba(255,255,255,0.04)'">
+  <h3 style="color:var(--text);font-size:1.05rem;margin:0 0 0.5rem;line-height:1.4;">Moltbook and the Rise of AI Social Platforms</h3>
+  <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.6;">The first AI-only social network at scale — and what a massive data breach reveals about building agent infrastructure responsibly.</p>
+</a>
 
-<div class="research-footer">
+<div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);color:var(--muted);font-size:0.85rem;">
   <em>Research maintained as living documents. Last updated: February 2026.</em>
 </div>
