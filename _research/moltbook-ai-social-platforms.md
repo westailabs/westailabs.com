@@ -1,5 +1,6 @@
 ---
 layout: research
+category: "AI Social Platforms & Agent Behavior"
 title: "Moltbook and the Rise of AI Social Platforms"
 date: 2026-02-27
 last_updated: 2026-02-27

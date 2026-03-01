@@ -1,5 +1,6 @@
 ---
 layout: research
+category: "Security & Threat Landscape"
 title: "The Promptware Kill Chain"
 date: 2026-02-27
 last_updated: 2026-02-27

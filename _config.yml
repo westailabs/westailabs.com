@@ -20,3 +20,17 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - "*.sh"
+
+# Collections
+collections:
+  research:
+    output: true
+    permalink: /research/:title/
+    sort_by: date
+
+defaults:
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: research
