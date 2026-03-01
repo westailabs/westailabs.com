@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<a href="/research/" class="research-back">← Research Index</a>
+
+<article>
+  <header class="research-header">
+    {% if page.date %}<div class="research-meta">{{ page.date | date: "%B %-d, %Y" }}</div>{% endif %}
+    <h1 class="research-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="research-subtitle">{{ page.subtitle }}</p>{% endif %}
+  </header>
+
+  <div class="research-content">
+    {{ content }}
+  </div>
+</article>
