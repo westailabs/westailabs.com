@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research
 title: "The Agentic Economy and the Prompt Injection Arms Race"
 date: 2026-02-27
 last_updated: 2026-02-27

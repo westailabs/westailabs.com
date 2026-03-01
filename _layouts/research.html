@@ -2,16 +2,47 @@
 layout: default
 ---
 
-<a href="/research/" class="research-back">← Research Index</a>
-
-<article>
-  <header class="research-header">
-    {% if page.date %}<div class="research-meta">{{ page.date | date: "%B %-d, %Y" }}</div>{% endif %}
-    <h1 class="research-title">{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="research-subtitle">{{ page.subtitle }}</p>{% endif %}
-  </header>
-
-  <div class="research-content">
-    {{ content }}
+<section style="padding:6rem 1.5rem 4rem;">
+  <div style="max-width:760px;margin:0 auto;">
+    <a href="/research/" style="color:var(--cyan);font-size:.875rem;display:inline-block;margin-bottom:2rem;">← Back to Research</a>
+    
+    <h1 style="font-size:2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.75rem;">{{ page.title }}</h1>
+    
+    {% if page.excerpt %}
+    <p style="color:var(--muted);font-size:1.1rem;line-height:1.6;margin-bottom:1rem;font-style:italic;">{{ page.excerpt }}</p>
+    {% endif %}
+    
+    <div style="color:var(--muted);font-size:.85rem;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.07);">
+      {% if page.date %}Published: {{ page.date | date: "%B %Y" }}{% endif %}
+      {% if page.last_updated %} · Updated: {{ page.last_updated | date: "%B %Y" }}{% endif %}
+      {% if page.tags %} · {% for tag in page.tags %}<span style="background:rgba(34,211,238,0.1);color:var(--cyan);padding:2px 8px;border-radius:4px;font-size:.75rem;margin-right:4px;">{{ tag }}</span>{% endfor %}{% endif %}
+    </div>
+    
+    <div class="research-content" style="font-size:1rem;line-height:1.8;color:var(--text);">
+      {{ content }}
+    </div>
+    
+    <div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);">
+      <a href="/research/" style="color:var(--cyan);font-size:.875rem;">← Back to Research</a>
+    </div>
   </div>
-</article>
+</section>
+
+<style>
+.research-content h1 { font-size:1.75rem; font-weight:700; margin:2.5rem 0 1rem; color:var(--text); }
+.research-content h2 { font-size:1.4rem; font-weight:600; margin:2rem 0 .75rem; color:var(--text); }
+.research-content h3 { font-size:1.1rem; font-weight:600; margin:1.5rem 0 .5rem; color:var(--cyan); }
+.research-content h4 { font-size:1rem; font-weight:600; margin:1.25rem 0 .5rem; color:var(--muted); }
+.research-content p { margin-bottom:1rem; }
+.research-content ul, .research-content ol { margin:0 0 1rem 1.5rem; }
+.research-content li { margin-bottom:.4rem; }
+.research-content blockquote { border-left:3px solid var(--cyan); padding:.75rem 1.25rem; margin:1.5rem 0; background:rgba(34,211,238,0.05); border-radius:0 6px 6px 0; font-style:italic; color:var(--muted); }
+.research-content strong { color:var(--text); font-weight:600; }
+.research-content em { color:var(--muted); }
+.research-content table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:.9rem; }
+.research-content th { text-align:left; padding:.6rem .75rem; border-bottom:2px solid rgba(255,255,255,0.1); color:var(--cyan); font-weight:600; }
+.research-content td { padding:.5rem .75rem; border-bottom:1px solid rgba(255,255,255,0.05); }
+.research-content tr:hover td { background:rgba(255,255,255,0.02); }
+.research-content code { background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:4px; font-size:.9em; }
+.research-content hr { border:none; border-top:1px solid rgba(255,255,255,0.07); margin:2rem 0; }
+</style>

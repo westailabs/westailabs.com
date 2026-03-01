@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research
 title: "The Promptware Kill Chain"
 date: 2026-02-27
 last_updated: 2026-02-27
