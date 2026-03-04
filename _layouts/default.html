@@ -119,6 +119,19 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;margin-top:2.5rem}
+.team-card{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;transition:border-color .3s,transform .3s;text-decoration:none;color:inherit}
+.team-card:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.team-avatar{width:72px;height:72px;border-radius:50%;border:2px solid rgba(34,211,238,.3);flex-shrink:0;object-fit:cover}
+.team-info{flex:1}
+.team-name{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
+.team-emoji{font-size:1rem}
+.team-role{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:.75rem}
+.team-bio{font-size:.875rem;color:var(--muted);line-height:1.6;margin-bottom:.75rem}
+.team-link{font-size:.8rem;font-weight:500;color:var(--violet)}
+.team-card:hover .team-link{color:var(--cyan)}
+
 /* Mobile */
 @media(max-width:768px){
   .community-inner{grid-template-columns:1fr}
@@ -143,6 +156,7 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
   <ul class="nav-links">
     <li><a href="/#services" onclick="this.closest('.nav-links').classList.remove('open')">Services</a></li>
     <li><a href="/#opensource" onclick="this.closest('.nav-links').classList.remove('open')">Open Source</a></li>
+    <li><a href="/#team" onclick="this.closest('.nav-links').classList.remove('open')">The Team</a></li>
     <li><a href="/#about" onclick="this.closest('.nav-links').classList.remove('open')">About</a></li>
     <li><a href="/research/" onclick="this.closest('.nav-links').classList.remove('open')">Research</a></li>
     <li><a href="https://discord.gg/cpwCgcSvXB" target="_blank" rel="noopener" style="color:var(--cyan)">Community</a></li>
@@ -159,6 +173,7 @@ footer{padding:2rem 1.5rem;text-align:center;font-size:.8rem;color:rgba(148,163,
     <div class="footer-links">
       <a href="/#services">Services</a>
       <a href="/#opensource">Open Source</a>
+      <a href="/#team">The Team</a>
       <a href="/#about">About</a>
       <a href="/research/">Research</a>
       <a href="https://discord.gg/cpwCgcSvXB" target="_blank" rel="noopener">Community</a>
