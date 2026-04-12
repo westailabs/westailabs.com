@@ -395,23 +395,4 @@ The tools to address this vulnerability class are knowable and buildable. The or
 
 ---
 
-*This research is maintained as a living document. Last updated: April 12, 2026.*
- Hubinger, E., et al. (2024). "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training." arXiv:2401.05566. *Anthropic.*
-
-4. Wunderwuzzi, O.H., et al. (2026). "The Promptware Kill Chain." arXiv:2601.09625.
-
-5. Wu, Q., Bansal, G., Zhang, J., et al. (2023). "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation." *Microsoft Research.*
-
-6. LangChain. (2024). "LangGraph: Building Stateful, Multi-Actor Applications with LLMs." *LangChain Documentation.*
-
-7. CrewAI. (2024). "CrewAI: Framework for Orchestrating Role-Playing, Autonomous AI Agents." *CrewAI Documentation.*
-
-8. CISA / NSA / NCSC. (2021). "SolarWinds Orion Software Compromise — Joint Advisory." *U.S. Cybersecurity and Infrastructure Security Agency.*
-
-9. Trail of Bits. (2026). "Security Audit of Comet Browser AI Agent." *Trail of Bits Publications.*
-
-10. CISPA Helmholtz Center for Information Security. (2026). "Agent Behavior in Production: Large-Scale Study of Autonomous AI Social Platforms." arXiv:2602.10127.
-
----
-
 *This research is maintained as a living document. Last updated: March 1, 2026.*
