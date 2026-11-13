@@ -3,7 +3,7 @@
 ## Project overview
 
 - Source for the public West AI Labs website, [westailabs.com](https://westailabs.com): the landing page plus long-form research articles.
-- Jekyll site deployed to GitHub Pages. Public repo: [westailabs/westailabs.com](https://github.com/westailabs/westailabs.com). MIT licensed.
+- Jekyll site deployed to GitHub Pages. Public repo: [westailabs/westailabs.com](https://github.com/westailabs/westailabs.com). Code is MIT (`LICENSE`); articles, page copy, and images are CC BY 4.0 (`LICENSE-CONTENT`). Logos and the West AI Labs name are trademarks, not licensed. Keep the footer license line in `_layouts/default.html` in sync.
 
 ## Setup and commands
 
