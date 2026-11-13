@@ -16,6 +16,11 @@ exclude:
   - ARCHITECT-REVIEW-2026-02-27.md
   - READY-TO-REVIEW.md
   - CHANGELOG.md
+  - AGENTS.md
+  - CLAUDE.md
+  - CONTRIBUTING.md
+  - SECURITY.md
+  - LICENSE
   - README.md
   - Gemfile
   - Gemfile.lock
