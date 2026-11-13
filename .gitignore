@@ -3,3 +3,10 @@ ARCHITECT-REVIEW-2026-02-27.md
 vendor/
 _site/
 .bundle/
+
+# Baseline ignores
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+.DS_Store
+.env
