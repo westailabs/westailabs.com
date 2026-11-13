@@ -21,6 +21,7 @@ exclude:
   - CONTRIBUTING.md
   - SECURITY.md
   - LICENSE
+  - LICENSE-CONTENT
   - README.md
   - Gemfile
   - Gemfile.lock
