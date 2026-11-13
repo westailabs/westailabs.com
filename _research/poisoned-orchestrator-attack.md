@@ -3,7 +3,7 @@ layout: research
 category: "Security & Threat Landscape"
 title: "The Poisoned Orchestrator Attack: Trust Hierarchy Exploitation in Multi-Agent AI Systems"
 date: 2026-03-01
-last_updated: 2026-03-01
+last_updated: 2026-04-12
 tags: [security, multi-agent, orchestration, trust, supply-chain]
 excerpt: "When the orchestrator is compromised, every sub-agent it spawns inherits that compromise through its system prompt. This is a novel vulnerability class — and no existing monitoring tool can see it."
 status: published
@@ -345,6 +345,15 @@ For high-stakes multi-agent deployments, mandatory human checkpoints at specific
 
 Human checkpoints are not scalable to all sub-agent actions, but they are effective at limiting the impact of orchestrator compromise on the highest-risk action categories.
 
+### 8.6 Applied Hardening: The AI Heirloom Standard
+
+In April 2026, West AI Labs implemented a suite of these mitigations within our internal infrastructure, shifting from axiomatic trust to systemic validation. This implementation includes:
+
+- **Graph-First State Verification:** Orchestrators must verify the state of services, agents, and policies against an out-of-band Neo4j graph before planning or execution, reducing reliance on potentially poisoned local context.
+- **Model Pinning and Reasoning Enforcement:** Orchestrators are strictly pinned to high-reasoning models with maximum thinking budgets enforced at the system level, mitigating the risk of subtle bias injection.
+- **Capability Ceilings:** Hard-coded limits on sub-agent tools prevent a poisoned orchestrator from granting excessive permissions.
+- **Automated Hash Verification:** At session start, an independent hook calculates cryptographic hashes of core orchestrator instruction files and compares them against a trusted baseline. Mismatches trigger a critical security halt, commanding the agent to assume an attack is in progress.
+
 ---
 
 ## 9. Conclusion and Call to Action
@@ -395,4 +404,4 @@ The tools to address this vulnerability class are knowable and buildable. The or
 
 ---
 
-*This research is maintained as a living document. Last updated: March 1, 2026.*
+*This research is maintained as a living document. Last updated: April 12, 2026.*
