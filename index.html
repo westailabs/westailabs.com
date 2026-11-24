@@ -2,10 +2,6 @@
 layout: default
 title: "West AI Labs — AI Infrastructure That Ships"
 description: "West AI Labs builds private, production-ready AI systems behind the firewall. Consulting, deployment, and open-source tooling for enterprises that need AI infrastructure that actually works."
-og_title: "West AI Labs — AI Infrastructure That Ships"
-og_description: "Private, production-ready AI systems behind the firewall. From consulting to deployment."
-twitter_title: "West AI Labs — AI Infrastructure That Ships"
-twitter_description: "Private, production-ready AI systems behind the firewall."
 ---
 
 <section class="hero" id="hero">
@@ -91,6 +87,30 @@ twitter_description: "Private, production-ready AI systems behind the firewall."
       <span class="repo-link">View on GitHub →</span>
     </a>
   </div>
+</div>
+</section>
+
+
+<section id="research-preview">
+<div class="container">
+  <div class="fade-in">
+    <div class="section-label">Research</div>
+    <h2 class="section-title">Independent research on agents and security</h2>
+    <p style="color:var(--muted);max-width:640px">Living documents on multi-agent trust, local inference, and the threat landscape — written from systems we actually run.</p>
+  </div>
+  <div class="repo-grid fade-in">
+    {% assign poa = site.research | where_exp: "paper", "paper.slug == 'poisoned-orchestrator-attack'" %}
+    {% assign rest = site.research | where_exp: "paper", "paper.slug != 'poisoned-orchestrator-attack'" | sort: "last_updated" | reverse %}
+    {% assign papers = poa | concat: rest %}
+    {% for paper in papers limit: 3 %}
+    <a class="repo-card" href="{{ paper.url }}">
+      <div class="repo-name">{{ paper.title }}</div>
+      <p class="repo-desc">{{ paper.excerpt | strip_html | truncate: 180 }}</p>
+      <span class="repo-link">Read the paper →</span>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="fade-in" style="margin-top:1.5rem"><a href="/research/" class="repo-link">All research →</a></p>
 </div>
 </section>
 
