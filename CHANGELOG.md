@@ -1,6 +1,19 @@
 # CHANGELOG — westailabs.com
 
-## [Unreleased] — 2026-02-27
+## [Unreleased] — 2026-11-23
+
+### Added
+- Per-page SEO and share cards via `jekyll-seo-tag` (`{% seo %}` in the default layout): canonical, `og:url`, `og:type` (article on research pages), and a single Twitter card. Research `excerpt` is the page description.
+- `jekyll-sitemap` (`/sitemap.xml`), `robots.txt` (points at the sitemap), and `jekyll-feed` (`/feed.xml` for the research collection).
+- Root `favicon.ico` (16×32, from the existing PNG).
+- Homepage research section with three cards, Poisoned Orchestrator first, generated from the research collection.
+- Draft outline and test plan for "Grounding is not safety: retrieval poisoning in private RAG" in `_drafts/` (not built, not linked, not published).
+
+### Changed
+- Removed hardcoded generic Open Graph / Twitter tags that pinned every page to the homepage URL and site-wide description.
+- Research library "Last updated" is derived from the newest `last_updated` in the collection.
+
+## [2026-02-27] — Jekyll migration (historical)
 
 ### Added
 - Jekyll site structure: `_config.yml`, `_layouts/default.html`

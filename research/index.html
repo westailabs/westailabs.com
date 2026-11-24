@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Research Library
+description: "Independent research on AI agents, security, and infrastructure — published by West AI Labs."
 permalink: /research/
 ---
 
@@ -20,5 +21,6 @@ permalink: /research/
 {% endfor %}
 
 <div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);color:var(--muted);font-size:0.85rem;">
-  <em>Research maintained as living documents. Last updated: March 11, 2026.</em>
+  {% assign latest = site.research | sort: "last_updated" | last %}
+  <em>Research maintained as living documents. Last updated: {{ latest.last_updated | date: "%B %-d, %Y" }}.</em>
 </div>

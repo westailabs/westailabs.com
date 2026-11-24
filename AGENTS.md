@@ -38,7 +38,7 @@ JEKYLL_ENV=production bundle exec jekyll build  # production build into _site/
 - Plain English. Cut jargon, keep claims sourced, and link sources inline.
 - New research articles go in `_research/` with front matter (`title`, `date`, `description`), and get a `CHANGELOG.md` entry.
 - Preserve the color scheme (`#1e2024` / `#22d3ee` / `#a78bfa`), the analytics tag in `_config.yml`, and the mobile menu.
-- GitHub Pages plugin whitelist only (currently `jekyll-seo-tag`).
+- GitHub Pages plugin whitelist only (currently `jekyll-seo-tag`, `jekyll-sitemap`, and `jekyll-feed`). Default layout uses `{% seo %}` — do not hard-code `og:url` or duplicate Twitter/OG tags. New research pages need `title`, `date`, `last_updated`, and `excerpt` (excerpt is the share-card description).
 
 ## Git workflow
 

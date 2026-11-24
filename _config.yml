@@ -1,15 +1,33 @@
 # West AI Labs — Jekyll Configuration
 title: "West AI Labs"
+tagline: "AI Infrastructure That Ships"
 description: "West AI Labs builds private, production-ready AI systems behind the firewall. Consulting, deployment, and open-source tooling for enterprises that need AI infrastructure that actually works."
 url: "https://westailabs.com"
 baseurl: ""
+lang: en
 
 # Google Analytics
 google_analytics: "G-FY6CCE6E37"
 
-# Plugins (GitHub Pages whitelist only)
+# Default share image (jekyll-seo-tag)
+logo: /assets/logo-dark.png
+
+# Plugins (GitHub Pages whitelist)
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Research is the public feed at /feed.xml. jekyll-feed always also
+# emits a posts feed; point that at a side path so the two do not collide.
+feed:
+  path: "/feed.xml"
+  excerpt_only: true
+  collections:
+    posts:
+      path: "/feed/posts.xml"
+    research:
+      path: "/feed.xml"
 
 # Exclude from build
 exclude:
@@ -26,6 +44,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - "*.sh"
+  - _drafts/
+  - vendor/
 
 # Collections
 collections:
@@ -37,6 +57,11 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      image: /assets/og-image.png
+  - scope:
+      path: ""
       type: "research"
     values:
       layout: research
+      image: /assets/og-image.png
